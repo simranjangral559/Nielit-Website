@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const mongoUri = process.env.MONGO_URI;
+
 
 const app = express();
 
@@ -10,7 +12,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-const mongoUri = 'mongodb://127.0.0.1:27017/college1';
+const mongoUri = process.env.MONGO_URI;
+// const mongoUri = 'mongodb://127.0.0.1:27017/college1';
 mongoose.connect(mongoUri)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log('MongoDB connection error:', err));
