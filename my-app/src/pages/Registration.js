@@ -28,7 +28,7 @@ const Registration = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:5000/registration", {
+      const response = await fetch("https://nielit-website.onrender.com/Registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
