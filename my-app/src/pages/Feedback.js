@@ -17,7 +17,7 @@ const Feedback = () => {
   
     if (formData.name && formData.email && formData.phone && formData.feedback) {
       try {
-        const response = await fetch('http://localhost:5000/feedback', {
+        const response = await fetch('https://nielit-website.onrender.com/Feedback', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
